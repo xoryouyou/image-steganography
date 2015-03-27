@@ -1,12 +1,7 @@
 import argparse
 import Image
 
-from functions.binary import hideASCII
-from functions.binary import showASCII
-from functions.mask import encode
-from functions.mask import decode
-
-
+from functions.binary import encode
 
 if __name__ == '__main__':
     arg = argparse.ArgumentParser()
@@ -17,14 +12,3 @@ if __name__ == '__main__':
 
     img = encode(Image.open(args['message']), Image.open(args['target']))
     img.save(args['output'])
-
-
-
-
-    #hidden = hideASCII("Hello World!")
-    #showASCII(hidden)
-
-    #img = hide(Image.open("../img/message.png"), Image.open("../img/background.png"))
-    #decoded = decode(img)
-    #decoded.show()
-    #img.save("../img/output2.png")

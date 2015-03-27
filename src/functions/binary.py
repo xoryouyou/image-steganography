@@ -1,4 +1,3 @@
-import Image
 import random
 
 def binary(message):
@@ -7,6 +6,7 @@ def binary(message):
   for char in message:
     string += (bin(ord(char))[2:])
   string += '10101010'
+
 
   print("Encoded:%s" % string)
   for char in string:
@@ -21,7 +21,7 @@ def setbit(byte, bit):
   return (byte | bit) if bit else (byte & 0xFE)
 
 
-def hideASCII(message, img):
+def encode(message, img):
 
   stream = binary(message)
   w, h = img.size
@@ -40,11 +40,12 @@ def hideASCII(message, img):
   return img
 
 
-def showASCII(image):
+def decode(image):
   #branch here for image type ,path, etc
   message = ""
 
   w, h = image.size
+
 
   for x in range(w):
     for y in range(h):

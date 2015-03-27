@@ -1,5 +1,4 @@
 import Image
-import random
 
 def encode(message, image):
   w, h = message.size
