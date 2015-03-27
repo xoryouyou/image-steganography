@@ -1,7 +1,7 @@
 import argparse
 import Image
 
-from functions.mask import encode
+from functions.binary import encode
 
 if __name__ == '__main__':
     arg = argparse.ArgumentParser()
